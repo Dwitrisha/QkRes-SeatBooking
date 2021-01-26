@@ -13,9 +13,53 @@
 
 
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-   
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    
+    <script>
+
+        type="text/javascript"
+        src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"
+      </script>
+  
+      <script>
+        function setFormImage(id) {
+  
+          if (id != "" && !document.getElementById("input_" + id)) {
+            var img = document.createElement("input");
+            img.type = "text";
+            img.id = "input_" + id;
+            img.name = "images[]";
+            img.value = id;
+  
+  
+  
+            document.imageSubmit.appendChild(img);
+          }
+        }
+  
+        $(document).ready(function () {
+          $("#jqueryimages img").click(function () {
+            setFormImage(this.id);
+          });
+        });
+  
+      </script>
     <header>
         <div class="background">
             <div class="topnav">
@@ -80,6 +124,7 @@
         </div>
        
         </div>
+       <div  id="jqueryimages" > 
             <div class="tablegrid">
                 <div class="table" id="Table1">
                     <div style="text-align: center;">Table 1</div>
@@ -87,45 +132,52 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div   class="selected "> <img  onclick='SeatNo()' value="1-A" class="seat" id="seat" src="images/seat.png">
                             <br>
-                            <div class="seatselect">1-A
-                                <input type="radio" id="slot" name="slot" value='1-A'>
-                            </div>
+                            <div>
+                                <input  class="seatselect" type="button"  id="slot" value="1-A" onclick='SeatNo()'>
+                            </div>       
+                                
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img  class="seat" value="1-B"  onclick='SeatNo()' src="images/seat.png">
                             <br>
-                            <div class="seatselect">1-B
-                                <input type="radio" id="slot" name="slot" value='1-B'>
-                            </div>
+                            
+                            <div>
+                                <input  class="seatselect" type="button"  id="slot" value="1-B" onclick='SeatNo()'>
+                            </div>       
+                                
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-C" class="seat" src="images/seat.png">
                             <br>
-                            <div class="seatselect">1-C
-                                <input type="radio" id="slot" name="slot" value='1-C'>
-                            </div>
+                            <div>
+                                <input  class="seatselect" type="button"  id="slot" value="1-C" onclick='SeatNo()'>
+                            </div>       
+                                
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img  onclick='SeatNo()' value="1-D" class="seat" src="images/seat.png">
                             <br>
-                            <div class="seatselect">1-D
-                                <input type="radio" id="slot" name="slot" value='1-D'>
-                            </div>
+                            <div>
+                                <input  class="seatselect" type="button"  id="slot" value="1-D" onclick='SeatNo()'>
+                            </div>       
+                                
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-E"  class="seat" src="images/seat.png">
                             <br>
-                            <div class="seatselect">1-E
-                                <input type="radio" id="slot" name="slot" value='1-E'>
-                            </div>
+                            <div>
+                                <input  class="seatselect" type="button"  id="slot" value="1-E" onclick='SeatNo()'>
+                            </div>       
+                                
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
-                            <div class="seatselect">1-F
-                                <input type="radio" id="slot" name="slot" value='1-F'>
-                            </div>
+                            <div>
+                                <input  class="seatselect" type="button"  id="slot" value="1-F" onclick='SeatNo()'>
+                            </div>       
+                                
                         </div>
                     </div>
                 </div>
@@ -135,44 +187,44 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">2-A
-                                <input type="radio" id="slot" name="slot" value='2-A'>
+                                
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">2-B
-                                <input type="radio" id="slot" name="slot" value='2-B'>
+                               
                             </div>
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">2-C
-                                <input type="radio" id="slot" name="slot" value='2-C'>
+                                
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">2-D
-                                <input type="radio" id="slot" name="slot" value='2-D'>
+                             
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">2-E
-                                <input type="radio" id="slot" name="slot" value='2-E'>
+                               
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">2-F
-                                <input type="radio" id="slot" name="slot" value='2-F'>
+                               
                             </div>
                         </div>
                     </div>
@@ -187,44 +239,44 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">3-A
-                                <input type="radio" id="slot" name="slot" value='3-A'>
+                               
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">3-B
-                                <input type="radio" id="slot" name="slot" value='3-B'>
+                               
                             </div>
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img  onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">3-C
-                                <input type="radio" id="slot" name="slot" value='3-C'>
+                               
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">3-D
-                                <input type="radio" id="slot" name="slot" value='3-D'>
+                                
                             </div>
-                        </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        </div> 
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">3-E
-                                <input type="radio" id="slot" name="slot" value='3-E'>
+                               
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">3-F
-                                <input type="radio" id="slot" name="slot" value='3-F'>
+                               
                             </div>
                         </div>
                     </div>
@@ -235,14 +287,14 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">4-A
                                 <input type="radio" id="slot" name="slot" value='4-A'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">4-B
                                 <input type="radio" id="slot" name="slot" value='4-B'>
@@ -250,26 +302,26 @@
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">4-C
                                 <input type="radio" id="slot" name="slot" value='4-C'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">4-D
                                 <input type="radio" id="slot" name="slot" value='4-D'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">4-E
                                 <input type="radio" id="slot" name="slot" value='4-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">4-F
                                 <input type="radio" id="slot" name="slot" value='4-F'>
@@ -286,41 +338,41 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">5-A
-                                <input type="radio" id="slot" name="slot" value='5-A'>
+                              
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">5-B
-                                <input type="radio" id="slot" name="slot" value='5-B'>
+                               
                             </div>
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">5-C
-                                <input type="radio" id="slot" name="slot" value='5-C'>
+                               
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">5-D
-                                <input type="radio" id="slot" name="slot" value='5-D'>
+                              
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">5-E
                                 <input type="radio" id="slot" name="slot" value='5-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">5-F
                                 <input type="radio" id="slot" name="slot" value='5-F'>
@@ -334,14 +386,14 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">6-A
                                 <input type="radio" id="slot" name="slot" value='6-A'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">6-B
                                 <input type="radio" id="slot" name="slot" value='6-B'>
@@ -349,26 +401,26 @@
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img  onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">6-C
                                 <input type="radio" id="slot" name="slot" value='6-C'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">6-D
                                 <input type="radio" id="slot" name="slot" value='6-D'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">6-E
                                 <input type="radio" id="slot" name="slot" value='6-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">6-F
                                 <input type="radio" id="slot" name="slot" value='6-F'>
@@ -384,14 +436,14 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">7-A
                                 <input type="radio" id="slot" name="slot" value='7-A'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">7-B
                                 <input type="radio" id="slot" name="slot" value='7-B'>
@@ -399,26 +451,26 @@
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">7-C
                                 <input type="radio" id="slot" name="slot" value='7-C'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">7-D
-                                <input type="radio" id="slot" name="slot" value='7-D'>
+                                
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">7-E
                                 <input type="radio" id="slot" name="slot" value='7-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">7-F
                                 <input type="radio" id="slot" name="slot" value='7-F'>
@@ -432,14 +484,14 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">8-A
                                 <input type="radio" id="slot" name="slot" value='8-A'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">8-B
                                 <input type="radio" id="slot" name="slot" value='8-B'>
@@ -447,26 +499,26 @@
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">8-C
                                 <input type="radio" id="slot" name="slot" value='8-C'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">8-D
                                 <input type="radio" id="slot" name="slot" value='8-D'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">8-E
                                 <input type="radio" id="slot" name="slot" value='8-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">8-F
                                 <input type="radio" id="slot" name="slot" value='8-F'>
@@ -484,14 +536,14 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">9-A
                                 <input type="radio" id="slot" name="slot" value='9-A'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">9-B
                                 <input type="radio" id="slot" name="slot" value='9-B'>
@@ -499,26 +551,26 @@
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">9-C
                                 <input type="radio" id="slot" name="slot" value='9-C'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">9-D
                                 <input type="radio" id="slot" name="slot" value='9-D'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">9-E
                                 <input type="radio" id="slot" name="slot" value='9-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F"  class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">9-F
                                 <input type="radio" id="slot" name="slot" value='9-F'>
@@ -532,14 +584,14 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">10-A
                                 <input type="radio" id="slot" name="slot" value='10-A'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">10-B
                                 <input type="radio" id="slot" name="slot" value='10-B'>
@@ -547,26 +599,26 @@
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">10-C
                                 <input type="radio" id="slot" name="slot" value='10-C'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">10-D
                                 <input type="radio" id="slot" name="slot" value='10-D'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">10-E
                                 <input type="radio" id="slot" name="slot" value='10-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">10-F
                                 <input type="radio" id="slot" name="slot" value='10-F'>
@@ -583,14 +635,14 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">11-A
                                 <input type="radio" id="slot" name="slot" value='11-A'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">11-B
                                 <input type="radio" id="slot" name="slot" value='11-B'>
@@ -598,26 +650,26 @@
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">11-C
                                 <input type="radio" id="slot" name="slot" value='11-C'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">11-D
                                 <input type="radio" id="slot" name="slot" value='11-D'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">11-E
                                 <input type="radio" id="slot" name="slot" value='11-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">11-F
                                 <input type="radio" id="slot" name="slot" value='11-F'>
@@ -631,14 +683,14 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">12-A
                                 <input type="radio" id="slot" name="slot" value='12-A'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">12-B
                                 <input type="radio" id="slot" name="slot" value='12-B'>
@@ -646,26 +698,26 @@
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">12-C
                                 <input type="radio" id="slot" name="slot" value='12-C'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">12-D
                                 <input type="radio" id="slot" name="slot" value='12-D'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">12-E
                                 <input type="radio" id="slot" name="slot" value='12-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">12-F
                                 <input type="radio" id="slot" name="slot" value='12-F'>
@@ -682,14 +734,14 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">13-A
                                 <input type="radio" id="slot" name="slot" value='13-A'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">13-B
                                 <input type="radio" id="slot" name="slot" value='13-B'>
@@ -697,26 +749,26 @@
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">13-C
                                 <input type="radio" id="slot" name="slot" value='13-C'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">13-D
                                 <input type="radio" id="slot" name="slot" value='13-D'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">13-E
                                 <input type="radio" id="slot" name="slot" value='13-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">13-F
                                 <input type="radio" id="slot" name="slot" value='13-F'>
@@ -730,14 +782,14 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">14-A
                                 <input type="radio" id="slot" name="slot" value='14-A'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">14-B
                                 <input type="radio" id="slot" name="slot" value='14-B'>
@@ -745,26 +797,26 @@
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">14-C
                                 <input type="radio" id="slot" name="slot" value='14-C'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">14-D
                                 <input type="radio" id="slot" name="slot" value='14-D'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">14-E
                                 <input type="radio" id="slot" name="slot" value='14-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">14-F
                                 <input type="radio" id="slot" name="slot" value='14-F'>
@@ -781,14 +833,14 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">15-A
                                 <input type="radio" id="slot" name="slot" value='15-A'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">15-B
                                 <input type="radio" id="slot" name="slot" value='15-B'>
@@ -796,26 +848,26 @@
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">15-C
                                 <input type="radio" id="slot" name="slot" value='15-C'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">15-D
                                 <input type="radio" id="slot" name="slot" value='15-D'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">15-E
                                 <input type="radio" id="slot" name="slot" value='15-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">15-F
                                 <input type="radio" id="slot" name="slot" value='15-F'>
@@ -829,14 +881,14 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">16-A
                                 <input type="radio" id="slot" name="slot" value='16-A'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">16-B
                                 <input type="radio" id="slot" name="slot" value='16-B'>
@@ -844,26 +896,26 @@
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">16-C
                                 <input type="radio" id="slot" name="slot" value='16-C'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">16-D
                                 <input type="radio" id="slot" name="slot" value='16-D'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">16-E
                                 <input type="radio" id="slot" name="slot" value='16-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">16-F
                                 <input type="radio" id="slot" name="slot" value='16-F'>
@@ -880,14 +932,14 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">17-A
                                 <input type="radio" id="slot" name="slot" value='17-A'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">17-B
                                 <input type="radio" id="slot" name="slot" value='17-B'>
@@ -895,26 +947,26 @@
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">17-C
                                 <input type="radio" id="slot" name="slot" value='17-C'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">17-D
                                 <input type="radio" id="slot" name="slot" value='17-D'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">17-E
                                 <input type="radio" id="slot" name="slot" value='17-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">17-F
                                 <input type="radio" id="slot" name="slot" value='17-F'>
@@ -928,14 +980,14 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">18-A
                                 <input type="radio" id="slot" name="slot" value='18-A'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">18-B
                                 <input type="radio" id="slot" name="slot" value='18-B'>
@@ -943,26 +995,26 @@
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">18-C
                                 <input type="radio" id="slot" name="slot" value='18-C'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">18-D
                                 <input type="radio" id="slot" name="slot" value='18-D'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">18-E
                                 <input type="radio" id="slot" name="slot" value='18-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">18-F
                                 <input type="radio" id="slot" name="slot" value='18-F'>
@@ -978,14 +1030,14 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">19-A
                                 <input type="radio" id="slot" name="slot" value='19-A'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">19-B
                                 <input type="radio" id="slot" name="slot" value='19-B'>
@@ -993,26 +1045,26 @@
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">19-C
                                 <input type="radio" id="slot" name="slot" value='19-C'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">19-D
                                 <input type="radio" id="slot" name="slot" value='19-D'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">19-E
                                 <input type="radio" id="slot" name="slot" value='19-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">19-F
                                 <input type="radio" id="slot" name="slot" value='19-F'>
@@ -1026,14 +1078,14 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">20-A
                                 <input type="radio" id="slot" name="slot" value='20-A'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">20-B
                                 <input type="radio" id="slot" name="slot" value='20-B'>
@@ -1041,26 +1093,26 @@
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">20-C
                                 <input type="radio" id="slot" name="slot" value='20-C'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">20-D
                                 <input type="radio" id="slot" name="slot" value='20-D'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">20-E
                                 <input type="radio" id="slot" name="slot" value='20-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">20-F
                                 <input type="radio" id="slot" name="slot" value='20-F'>
@@ -1076,14 +1128,14 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">21-A
                                 <input type="radio" id="slot" name="slot" value='21-A'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">21-B
                                 <input type="radio" id="slot" name="slot" value='21-B'>
@@ -1091,26 +1143,26 @@
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">21-C
                                 <input type="radio" id="slot" name="slot" value='21-C'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">21-D
                                 <input type="radio" id="slot" name="slot" value='21-D'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">21-E
                                 <input type="radio" id="slot" name="slot" value='21-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">21-F
                                 <input type="radio" id="slot" name="slot" value='21-F'>
@@ -1124,14 +1176,14 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">22-A
                                 <input type="radio" id="slot" name="slot" value='22-A'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">22-B
                                 <input type="radio" id="slot" name="slot" value='22-B'>
@@ -1139,26 +1191,26 @@
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">22-C
                                 <input type="radio" id="slot" name="slot" value='22-C'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">22-D
                                 <input type="radio" id="slot" name="slot" value='22-D'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">22-E
                                 <input type="radio" id="slot" name="slot" value='22-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">22-F
                                 <input type="radio" id="slot" name="slot" value='22-F'>
@@ -1174,14 +1226,14 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">23-A
                                 <input type="radio" id="slot" name="slot" value='23-A'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">23-B
                                 <input type="radio" id="slot" name="slot" value='23-B'>
@@ -1189,26 +1241,26 @@
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F"class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">23-C
                                 <input type="radio" id="slot" name="slot" value='23-C'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img  onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">23-D
                                 <input type="radio" id="slot" name="slot" value='23-D'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">23-E
                                 <input type="radio" id="slot" name="slot" value='23-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">23-F
                                 <input type="radio" id="slot" name="slot" value='23-F'>
@@ -1222,14 +1274,14 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">24-A
                                 <input type="radio" id="slot" name="slot" value='24-A'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">24-B
                                 <input type="radio" id="slot" name="slot" value='24-B'>
@@ -1237,26 +1289,26 @@
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">24-C
                                 <input type="radio" id="slot" name="slot" value='24-C'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">24-D
                                 <input type="radio" id="slot" name="slot" value='24-D'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">24-E
                                 <input type="radio" id="slot" name="slot" value='24-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">24-F
                                 <input type="radio" id="slot" name="slot" value='24-F'>
@@ -1272,14 +1324,14 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">25-A
                                 <input type="radio" id="slot" name="slot" value='25-A'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">25-B
                                 <input type="radio" id="slot" name="slot" value='25-B'>
@@ -1287,26 +1339,26 @@
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">25-C
                                 <input type="radio" id="slot" name="slot" value='25-C'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">25-D
                                 <input type="radio" id="slot" name="slot" value='25-D'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">25-E
                                 <input type="radio" id="slot" name="slot" value='25-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">25-F
                                 <input type="radio" id="slot" name="slot" value='25-F'>
@@ -1320,14 +1372,14 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">26-A
                                 <input type="radio" id="slot" name="slot" value='26-A'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">26-B
                                 <input type="radio" id="slot" name="slot" value='26-B'>
@@ -1335,26 +1387,26 @@
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">26-C
                                 <input type="radio" id="slot" name="slot" value='26-C'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img  onclick='SeatNo()' value="1-F"class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">26-D
                                 <input type="radio" id="slot" name="slot" value='26-D'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">26-E
                                 <input type="radio" id="slot" name="slot" value='26-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">26-F
                                 <input type="radio" id="slot" name="slot" value='26-F'>
@@ -1370,14 +1422,14 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">27-A
                                 <input type="radio" id="slot" name="slot" value='27-A'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">27-B
                                 <input type="radio" id="slot" name="slot" value='27-B'>
@@ -1385,26 +1437,26 @@
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">27-C
                                 <input type="radio" id="slot" name="slot" value='27-C'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">27-D
                                 <input type="radio" id="slot" name="slot" value='27-D'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">27-E
                                 <input type="radio" id="slot" name="slot" value='27-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">27-F
                                 <input type="radio" id="slot" name="slot" value='27-F'>
@@ -1418,14 +1470,14 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">28-A
                                 <input type="radio" id="slot" name="slot" value='28-A'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">28-B
                                 <input type="radio" id="slot" name="slot" value='28-B'>
@@ -1433,26 +1485,26 @@
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">28-C
                                 <input type="radio" id="slot" name="slot" value='28-C'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">28-D
                                 <input type="radio" id="slot" name="slot" value='28-D'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">28-E
                                 <input type="radio" id="slot" name="slot" value='28-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">28-F
                                 <input type="radio" id="slot" name="slot" value='28-F'>
@@ -1468,14 +1520,14 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">29-A
                                 <input type="radio" id="slot" name="slot" value='29-A'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">29-B
                                 <input type="radio" id="slot" name="slot" value='29-B'>
@@ -1483,26 +1535,26 @@
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">29-C
                                 <input type="radio" id="slot" name="slot" value='29-C'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">29-D
                                 <input type="radio" id="slot" name="slot" value='29-D'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">29-E
                                 <input type="radio" id="slot" name="slot" value='29-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">29-F
                                 <input type="radio" id="slot" name="slot" value='29-F'>
@@ -1516,14 +1568,14 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">30-A
                                 <input type="radio" id="slot" name="slot" value='30-A'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">30-B
                                 <input type="radio" id="slot" name="slot" value='30-B'>
@@ -1531,26 +1583,26 @@
 
                         </div>
 
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">30-C
                                 <input type="radio" id="slot" name="slot" value='30-C'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">30-D
                                 <input type="radio" id="slot" name="slot" value='30-D'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">30-E
                                 <input type="radio" id="slot" name="slot" value='30-E'>
                             </div>
                         </div>
-                        <div class="selected"> <img class="seat" src="images/seat.png">
+                        <div class="selected"> <img onclick='SeatNo()' value="1-F" class="seat" src="images/seat.png">
                             <br>
                             <div class="seatselect">30-F
                                 <input type="radio" id="slot" name="slot" value='30-F'>
@@ -1559,7 +1611,7 @@
                     </div>
                 </div>
             </div>
-
+        </div>
 
 
             <div style="text-align: center;">
@@ -1578,12 +1630,28 @@
 
    
     <script>
-          
-  function printChecked(){
+  
+  
+ 
+     function SeatNo(){
       
-    var seat=  document.getElementById("slot").value;
+      var seat=  document.getElementById("slot").value;   
+      var image = document.getElementById('seat');
+     
+
+  image.style.opacity= '70%';
+  image.style.border= 'solid 0.5rem #019b2f';
+  image.style.borderradius= '25px';
+  image.style.boxShadow= '0 0 2px #ddd;'
+  
+  alert("Seat Selected:"+seat);
+  
+      
+               }
+
+  function printChecked(){
            
-          alert("Seat Booked: " +seat)
+   
         }	
       
 
@@ -1602,13 +1670,11 @@
     
             
           }	
-        
-  
+
+
   
           </script>
 
-    
-         
- 
+
     
 </html>

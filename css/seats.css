@@ -11,7 +11,7 @@ body {
 
     .seat{
       width:15mm;
-      
+   
     }
     .table{
       box-shadow:3px 3px 4px #636363;
@@ -100,26 +100,26 @@ padding-left:3rem;
                     background-color: white;
                     margin-top:1rem;
                     
-                    width: 6rem;
+                    width: 5rem;
                     height:2.2rem;
                     border-radius: 5px;
                    color:black;
                  
                      box-shadow: 2px 2px 3px #4d4d4d;
                      text-shadow:none;
-                     padding-left:0.5rem;
-                     padding-right:0.5rem;
+                     padding-left:1rem;
+                    
                     }
         
                     .seatselect:hover{
-                      background-color:#29ee64;
+                      background-color:#6ee090;
                       filter: opacity(100%); 
                     }
 
                  
 
                     .selected{
-                      filter: opacity(60%); 
+                      filter: opacity(100%); 
                     }
 
                     .selected:hover{
@@ -386,4 +386,3 @@ font-weight:600;
 }
 
 }
-

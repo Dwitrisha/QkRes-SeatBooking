@@ -292,8 +292,9 @@ i {
 }
 
 @media(max-width:900px) {
+  
   .banner {
-      margin-top: 5rem;
+      margin-top: 4rem;
       font-size: 3rem;
   }
   .tablegrid {
@@ -334,16 +335,21 @@ i {
   .table2 {
       width: 100%;
   }
-  .seat {
-      width: 14mm;
-  }
+  
   .submits {
       margin-left: 40%;
       width: 10rem;
   }
+
+  .mobile{
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+
 }
 .chair{
   font-size:48px;
  margin-left:0.2rem;
  color: #414242;
 }
+

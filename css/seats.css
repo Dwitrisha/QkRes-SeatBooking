@@ -319,7 +319,7 @@ i {
       padding: 2rem;
       color: black;
       margin-right: 2rem;
-      padding: 1rem;
+      padding: none;
   }
   .table,
   .table2 {
@@ -342,7 +342,7 @@ i {
   }
 
   .mobile{
-    margin-right: 5%;
+    margin-right: 2%;
     margin-left: 5%;
   }
 

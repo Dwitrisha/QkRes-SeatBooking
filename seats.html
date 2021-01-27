@@ -10,10 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
-
-
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 
@@ -89,7 +86,7 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected "> <img onclick='printChecked(this.id)' id="1-A" class="seat" src="images/seat.png">
+                        <div class="selected "> <i class='chair fas fa-chair' onclick='printChecked(this.id)' id="1-A"></i>
                             <br>
                             <div>
                                 <input class="seatselect" type="button" value="1-A" onclick='printChecked(this.value)'>
@@ -97,7 +94,7 @@
 
 
                         </div>
-                        <div class="selected"> <img class="seat" id="1-B" onclick='printChecked(this.id)' src="images/seat.png">
+                        <div class="selected"> <i class='chair fas fa-chair' onclick='printChecked(this.id)' id="1-A"></i>
                             <br>
 
                             <div>
@@ -107,7 +104,8 @@
 
                         </div>
 
-                        <div class="selected"> <img onclick='printChecked(this.id)' id="1-C" class="seat" src="images/seat.png">
+                        <div class="selected"> <i class='chair fas fa-chair' onclick='printChecked(this.id)' id="1-A"></i>
+    
                             <br>
                             <div>
                                 <input class="seatselect" type="button" value="1-C" onclick='printChecked(this.value)'>
@@ -115,22 +113,23 @@
 
 
                         </div>
-                        <div class="selected"> <img onclick='printChecked(this.id)' id="1-D" class="seat" src="images/seat.png">
+                        <div class="selected"> <i class='chair fas fa-chair' onclick='printChecked(this.id)' id="1-A"></i>
                             <br>
                             <div>
                                 <input class="seatselect" type="button" value="1-D" onclick='printChecked(this.value)'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img onclick='printChecked(this.id)' id="1-E" class="seat" src="images/seat.png">
+                        <div class="selected"> <i class='chair fas fa-chair' onclick='printChecked(this.id)' id="1-A"></i>
                             <br>
                             <div>
                                 <input class="seatselect" type="button" value="1-E" onclick='printChecked(this.value)'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img onclick='printChecked(this.id)' id="1-F" class="seat" src="images/seat.png">
+                        <div class="selected"> <i class='chair fas fa-chair' onclick='printChecked(this.id)' id="1-A"></i>
                             <br>
+                          
                             <div>
                                 <input class="seatselect" type="button" value="1-F" onclick='printChecked(this.value)'>
                             </div>
@@ -144,41 +143,40 @@
                     <div class="seatgrid">
 
 
-                        <div class="selected"> <img onclick='printChecked(this.id)' id="2-A" class="seat" src="images/seat.png">
+                        <div class="selected"> <i class='chair fas fa-chair' onclick='printChecked(this.id)' id="1-A"></i>
                             <br>
                             <div>
                                 <input class="seatselect" type="button" value="2-A" onclick='printChecked(this.value)'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img onclick='printChecked(this.id)' id="2-B" class="seat" src="images/seat.png">
-                            <br>
+                        <div class="selected"> <i class='chair fas fa-chair' onclick='printChecked(this.id)' id="1-A"></i>
                             <div>
                                 <input class="seatselect" type="button" value="2-B" onclick='printChecked(this.value)'>
                             </div>
 
                         </div>
 
-                        <div class="selected"> <img onclick='printChecked(this.id)' id="2-C" class="seat" src="images/seat.png">
+                        <div class="selected"> <i class='chair fas fa-chair' onclick='printChecked(this.id)' id="1-A"></i>
                             <br>
                             <div>
                                 <input class="seatselect" type="button" value="2-C" onclick='printChecked(this.value)'>
                             </div>
 
                         </div>
-                        <div class="selected"> <img onclick='printChecked(this.id)' id="2-D" class="seat" src="images/seat.png">
+                        <div class="selected"><i class='chair fas fa-chair' onclick='printChecked(this.id)' id="1-A"></i>
                             <br>
                             <div>
                                 <input class="seatselect" type="button" value="2-D" onclick='printChecked(this.value)'>
                             </div>
                         </div>
-                        <div class="selected"> <img onclick='printChecked(this.id)' id="2-E" class="seat" src="images/seat.png">
+                        <div class="selected"> <i class='chair fas fa-chair' onclick='printChecked(this.id)' id="1-A"></i>
                             <br>
                             <div>
                                 <input class="seatselect" type="button" value="2-E" onclick='printChecked(this.value)'>
                             </div>
                         </div>
-                        <div class="selected"> <img onclick='printChecked(this.id)' id="2-F" class="seat" src="images/seat.png">
+                        <div class="selected"><i class='chair fas fa-chair' onclick='printChecked(this.id)' id="1-A"></i>
                             <br>
                             <div>
                                 <input class="seatselect" type="button" value="2-F" onclick='printChecked(this.value)'>
@@ -1593,14 +1591,10 @@ var globalVariable;
           
 
             var image = document.getElementById(val);
-            image.style.opacity = '70%';
-            image.style.border = 'solid 0.5rem #019b2f';
-            image.style.borderradius = '25px';
-            image.style.boxShadow = '0 0 2px #ddd';
+            image.style.color = 'green';
             globalVariable=val;
-
-            alert("Seat Chosen:" +val);
         }
+
 
         function Seat() {
 

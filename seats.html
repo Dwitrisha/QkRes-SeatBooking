@@ -1572,7 +1572,7 @@
         <div style="text-align: center;">
 
 
-            <button type="submit" class=" submits" value="Submit" onclick='printChecked()'>Submit</button>
+            <button type="submit" class=" submits" value="Submit" onclick='Seat()'>Submit</button>
         </div>
 
         <br>
@@ -1585,19 +1585,32 @@
 
 
     <script>
+
+var globalVariable;
+
         function printChecked(val) {
 
-            alert(val);
+          
 
             var image = document.getElementById(val);
             image.style.opacity = '70%';
             image.style.border = 'solid 0.5rem #019b2f';
             image.style.borderradius = '25px';
             image.style.boxShadow = '0 0 2px #ddd';
-        }
-    </script>
+            globalVariable=val;
 
-    <script>
+            alert("Seat Chosen:" +val);
+        }
+
+        function Seat() {
+
+           
+            var finalseat = globalVariable;
+            alert("Seat Booked:" +finalseat);
+          
+}
+
+    
         function GotoTable() {
 
             var seatno = document.getElementById("seatno").value;

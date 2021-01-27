@@ -331,7 +331,7 @@ i {
       padding-top: 1rem;
       height: 170px;
       box-shadow: 3px 3px 4px #636363;
-      padding-right:2rem;
+     
   }
   .table2 {
       width: 100%;
@@ -347,6 +347,9 @@ i {
     margin-left: 2%;
   }
 
+  .seatgrid{
+    margin-right:1rem;
+  }
 }
 .chair{
   font-size:48px;

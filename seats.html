@@ -78,7 +78,9 @@
         </div>
 
         </div>
-        <div id="jqueryimages">
+
+        <form>
+        <div class="mobile">
             <div class="tablegrid">
                 <div class="table" id="Table1">
                     <div style="text-align: center;">Table 1</div>
@@ -1567,76 +1569,31 @@
         </div>
 
 
-        <div style="text-align: center;">
 
-
-            <button type="submit" class=" submits" value="Submit" onclick='Seat()'>Submit</button>
-        </div>
-
-        <br>
-        <br>
-        </form>
+      
 
 
 
     </body>
 
-
+   
+    <script src="./js/seats.js"> </script>
     <script>
-        var globalVariable;
-
-        function printChecked(val) {
-            globalVariable = val;
-
-            for (var i = 1; i <= 30; i++) {
-                for (var j = 65; j <= 70; j++) {
-                    var a = i + "-" + String.fromCharCode(j);
-                    if (val == a) {
-                        var selectedimage = document.getElementById(a);
-                        var selectedbutton = document.getElementById("button:" + a);
-                        selectedimage.style.color = '#06ce6a';
-                        selectedbutton.style.backgroundColor = '#6eec83';
-
-                    } else {
-                        var image = document.getElementById(a);
-                        image.style.color = '#414242';
-
-                        var button = document.getElementById("button:" + a);
-                        button.style.backgroundColor = 'white';
-                    }
-
-                }
-
-            }
-
-        }
+    function store () {
+        // (A) VARIABLES TO PASS
+        var first = globalVariable;
+           
+       
+        // (B) SAVE TO SESSION STORAGE
+        // sessionStorage.setItem("KEY", "VALUE");
+        sessionStorage.setItem("first", first);
+      
+       
+        location.href = "qrcode.html";
+       
+      }
+      </script>
+      
+      <input type="button" value="Submit" class="submits" onclick="store()"/>
 
 
-
-
-
-
-        function Seat() {
-
-
-            var finalseat = globalVariable;
-            alert("Seat Booked:" + finalseat);
-
-        }
-
-
-        function GotoTable() {
-
-            var seatno = document.getElementById("seatno").value;
-            var element = "Table" + seatno;
-
-            var elem = document.getElementById(element);
-            elem.scrollIntoView();
-
-
-        }
-    </script>
-
-
-
-</html>

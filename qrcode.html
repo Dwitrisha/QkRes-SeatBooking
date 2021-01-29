@@ -1,0 +1,29 @@
+<html>
+
+<head></head>
+
+<body>
+    <input type="text" id="qr-data" >
+    <input type="button" onclick=generateQR() value="Generate Code">
+    <div id="qrcode"></div>
+</body>
+<script src="./js/QRcode.min.js"></script>
+<script>
+  var first = sessionStorage.getItem("first");
+      document.getElementById("qr-data").value = first; 
+    var qrdata = document.getElementById('qr-data');
+    var qrcode = new QRCode(document.getElementById('qrcode'));
+
+    function generateQR() {
+        
+        var data = qrdata.value;
+
+        qrcode.makeCode(data);
+    }
+
+
+
+ 
+</script>
+
+</html>

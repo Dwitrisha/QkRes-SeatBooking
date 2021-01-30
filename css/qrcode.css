@@ -32,6 +32,10 @@
     box-shadow: 2px 2px 4px rgb(54, 53, 53);
   }
 
+  .generate:hover {
+    background-position: right;
+  }
+  
 
   @media(max-width:900px){
       .generate{
@@ -48,6 +52,7 @@
       padding:1rem;
       width:320px;
       margin-top: 3rem;
+      
   }
 
   #qrcode{

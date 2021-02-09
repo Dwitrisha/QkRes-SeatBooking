@@ -312,7 +312,7 @@ i {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr;
-      margin-right: 1rem;
+      margin-right: 0.5rem;
   }
   .table {
       box-shadow: 3px 3px 4px #636363;
